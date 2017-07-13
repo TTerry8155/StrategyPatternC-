@@ -1,0 +1,1 @@
+Simply clone the project, open in visual studio, and click run
