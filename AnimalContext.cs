@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StrategyPattern.Strategies;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,19 @@ namespace StrategyPattern
 {
     public class AnimalContext
     {
-        public string Name { get; set; }
+        private IBehaviorStrategy _strategy;
 
+        public AnimalContext(IBehaviorStrategy strategy, string name)
+        {
+            _strategy = strategy;
+            Name = name;
+        }
+
+        public string Name { get; set; }
+    
         public void PreformBehavior()
         {
-
+            _strategy.ExecuteBehavior();
         }
 
         public void DescribeAnimal()

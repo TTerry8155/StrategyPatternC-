@@ -8,7 +8,7 @@ namespace StrategyPattern.Strategies
     {
         public void ExecuteBehavior()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("CRUNCH! CRUNCH! The animal is walking!");
         }
     }
 }
